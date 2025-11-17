@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
+
+
+
+    <!--        ------------------------------   Navbar  -------------------------------        -->
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">BAQATI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./SHOP.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./aboutus.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./profile.html">Profile</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="./cart.html"><i class="fa-solid fa-cart-arrow-down" style="color: #47494d;"></i></a>
+        </li> -->
+<li class="nav-item">
+          <a class="nav-link" href="./cart.html">Cart</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!--        ------------------------------   End Navbar  -------------------------------        -->
+
+
+
+
+    <!--        ------------------------------   Cart Header  -------------------------------        -->
+
+<div class="container mt-5 mb-4">
+    <div class="text-center">
+        <h1>Shopping Cart</h1>
+        <p class="text-muted">Review your items before checkout</p>
+    </div>
+</div>
+
+
+    <!--        ------------------------------   End Cart Header  -------------------------------        -->
+
+
+
+
+    <!--        ------------------------------   Cart Items  -------------------------------        -->
+
+<div class="container mb-5">
+    <div class="row">
+
+        <div class="col-lg-8 mb-4">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <img src="./assets/imgs/2CUT.jpeg" class="img-fluid rounded" alt="Red Roses" style="height: 120px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Red Roses</h5>
+                            <p class="text-muted mb-0">Beautiful red roses</p>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <input type="number" class="form-control form-control-sm" value="2" min="1">
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <p class="fw-bold mb-0">50 OMR</p>
+                        </div>
+                        <div class="col-md-1 text-center">
+                            <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <img src="./assets/imgs/10CUT.jpeg" class="img-fluid rounded" alt="Tulips" style="height: 120px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Spring Tulips</h5>
+                            <p class="text-muted mb-0">Fresh spring tulips</p>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <input type="number" class="form-control form-control-sm" value="1" min="1">
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <p class="fw-bold mb-0">20 OMR</p>
+                        </div>
+                        <div class="col-md-1 text-center">
+                            <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <img src="./assets/imgs/14CUT.jpeg" class="img-fluid rounded" alt="Bouquet" style="height: 120px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Mixed Bouquet</h5>
+                            <p class="text-muted mb-0">Colorful mixed flowers</p>
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <input type="number" class="form-control form-control-sm" value="1" min="1">
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <p class="fw-bold mb-0">30 OMR</p>
+                        </div>
+                        <div class="col-md-1 text-center">
+                            <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a href="./SHOP.html" class="btn btn-outline-secondary">Continue Shopping</a>
+                <button class="btn btn-outline-danger">Clear Cart</button>
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Order Summary</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Subtotal</span>
+                        <span>100 OMR</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Shipping</span>
+                        <span>5 OMR</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Tax</span>
+                        <span>8 OMR</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-3">
+                        <strong>Total</strong>
+                        <strong class="text-success">113 OMR</strong>
+                    </div>
+                    <button class="btn btn-primary w-100 mb-2">Proceed to Checkout</button>
+                    <button class="btn btn-outline-primary w-100">Apply Coupon</button>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h6 class="card-title">Have a Coupon?</h6>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter coupon code">
+                        <button class="btn btn-outline-secondary">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <!--        ------------------------------   End Cart Items  -------------------------------        -->
+
+
+
+
+    <!--        ------------------------------   Footer  -------------------------------        -->
+
+<footer class="bg-light text-dark py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="mb-3">BAQATI</h5>
+                <p class="text-muted">Where petals meet purpose.</p>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">About</a></li>
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Services</a></li>
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5 class="mb-3">Resources</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Blog</a></li>
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Support</a></li>
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="mb-3">Contact Us</h5>
+                <p class="text-muted mb-2">Muscat Expy Street, Muscat, Oman</p>
+                <p class="text-muted mb-2">+1 234 567 890</p>
+                <p class="text-muted mb-2">info@Baqati.com</p>
+            </div>
+        </div>
+
+        <div class="row mt-4 pt-4 border-top">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <p class="mb-0 text-muted">&copy; 2024 BAQATI. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!--        ------------------------------   End Footer  -------------------------------        -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

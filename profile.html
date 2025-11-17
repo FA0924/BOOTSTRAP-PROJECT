@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Profile</title>
+</head>
+<body>
+
+
+
+    <!--        ------------------------------   Navbar  -------------------------------        -->
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">BAQATI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./SHOP.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./aboutus.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="./profile.html">Profile</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="./cart.html"><i class="fa-solid fa-cart-arrow-down" style="color: #47494d;"></i></a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="./cart.html">Cart</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!--        ------------------------------   End Navbar  -------------------------------        -->
+
+
+
+
+    <!--        ------------------------------   Profile Section  -------------------------------        -->
+
+<div class="container my-5">
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="./assets/imgs/profile.jpg" class="rounded-circle mb-3" alt="Profile Picture" style="width: 120px; height: 120px; object-fit: cover;">
+                    <h5 class="card-title">John Doe</h5>
+                    <p class="text-muted">Customer Since 2024</p>
+                    <button class="btn btn-outline-primary" style="color: darkslategrey;">Edit Profile</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Personal Information</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" value="John Doe" style="color: darkgrey;">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" value="johndoe@example.com" style="color: darkgrey;">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" value="+1 234 567 890" style="color: darkgrey;">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Address</label>
+                            <textarea class="form-control" rows="3" style="color: darkgrey;">Muscat Expy Street, Muscat, Oman</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary" style="color: darkslategrey;">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <!--        ------------------------------   End Profile Section  -------------------------------        -->
+
+
+
+
+    <!--        ------------------------------   Order History  -------------------------------        -->
+
+<div class="container mb-5">
+    <div class="card">
+        <div class="card-header">
+            <h5>Order History</h5>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Items</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#12345</td>
+                        <td>Nov 15, 2024</td>
+                        <td>Red Roses, Mixed Bouquet</td>
+                        <td>55 OMR</td>
+                        <td><span class="badge bg-success">Delivered</span></td>
+                    </tr>
+                    <tr>
+                        <td>#12344</td>
+                        <td>Nov 10, 2024</td>
+                        <td>Spring Tulips</td>
+                        <td>20 OMR</td>
+                        <td><span class="badge bg-success">Delivered</span></td>
+                    </tr>
+                    <tr>
+                        <td>#12343</td>
+                        <td>Nov 5, 2024</td>
+                        <td>Orchids</td>
+                        <td>35 OMR</td>
+                        <td><span class="badge bg-warning">In Transit</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+    <!--        ------------------------------   End Order History  -------------------------------        -->
+
+
+
+
+    <!--        ------------------------------   Footer  -------------------------------        -->
+
+<!--      i got this from here ( http://mdbootstrap.com/docs/standard/navigation/footer/ )    -->
+
+
+<footer class="bg-body-tertiary text-center">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="form5Example26" class="form-control" value="johndoe@example.com" style="color: darkgrey;"/>
+              <!-- <label class="form-label" for="form5Example26">Email address</label> -->
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+  </div>
+  <!-- Grid container -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2020 Copyright:
+    <a class="text-body" href="/index.html">BAQATI.com</a>
+  </div>
+</footer>
+
+
+    <!--        ------------------------------   End Footer  -------------------------------        -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>
