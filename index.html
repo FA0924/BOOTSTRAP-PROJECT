@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baqati Site </title>
+    <title>BAQATI - Premium Flower Shop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
   </head>
 <body>
-    
-
-<!--        ------------------------------   Navbar  -------------------------------        -->
 
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand" href="#">BAQATI</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="./index.html">BAQATI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="./index.html">Home</a>
+          <a class="nav-link active" href="./index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./SHOP.html">Shop</a>
@@ -32,11 +30,11 @@
         <li class="nav-item">
           <a class="nav-link" href="./profile.html">Profile</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="./cart.html"><i class="fa-solid fa-cart-arrow-down" style="color: #47494d;"></i></a>
-        </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="./cart.html">Cart</a>
+          <a class="nav-link" href="./cart.html">
+            Cart
+            <span class="cart-badge" style="display: none;">0</span>
+          </a>
         </li>
       </ul>
     </div>
@@ -103,12 +101,48 @@
 
 <!--                 ------------------------------   End Carousel   -------------------------------        -->
 
+<div class="container my-5">
+  <div class="text-center mb-5">
+    <h2 class="section-title">Featured Products</h2>
+    <p class="text-muted">Handpicked selections for every occasion</p>
+  </div>
+  <div id="featuredProducts" class="product-grid">
+    <div class="text-center w-100">
+      <div class="loading-spinner"></div>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a href="./SHOP.html" class="btn btn-primary btn-lg">
+      <i class="fas fa-store me-2"></i>View All Products
+    </a>
+  </div>
+</div>
 
-
-
-
-
-
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <div class="stat-card">
+        <i class="fas fa-leaf feature-icon"></i>
+        <h5>Fresh Quality</h5>
+        <p class="text-muted">Freshest flowers delivered to your door</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="stat-card">
+        <i class="fas fa-truck-fast feature-icon"></i>
+        <h5>Fast Delivery</h5>
+        <p class="text-muted">Same-day delivery throughout Muscat</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="stat-card">
+        <i class="fas fa-heart feature-icon"></i>
+        <h5>Made with Love</h5>
+        <p class="text-muted">Every bouquet crafted with care</p>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!--        ------------------------------   Footer  -------------------------------        -->
 
@@ -134,20 +168,15 @@
 
           <!--Grid column-->
           <div class="col-md-5 col-12">
-            <!-- Email input -->
-            <div data-mdb-input-init class="form-outline mb-4">
-              <input type="email" id="form5Example26" class="form-control" value="johndoe@example.com" style="color: darkgrey;"/>
-              <!-- <label class="form-label" for="form5Example26">Email address</label> -->
+            <div class="form-outline mb-4">
+              <input type="email" class="form-control" placeholder="Enter your email"/>
             </div>
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
           <div class="col-auto">
-            <!-- Submit button -->
-            <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4">
-              Subscribe
-            </button>
+            <button type="submit" class="btn btn-primary mb-4">Subscribe</button>
           </div>
           <!--Grid column-->
         </div>
@@ -158,18 +187,39 @@
   </div>
   <!-- Grid container -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2020 Copyright:
-    <a class="text-body" href="/index.html">BAQATI.com</a>
+    © 2024 Copyright: <a class="text-body" href="./index.html">BAQATI.com</a>
   </div>
 </footer>
     <!--        ------------------------------   End Footer  -------------------------------        -->
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
+<script type="module">
+  import { getProducts, createProductCard } from './assets/js/products.js';
+  import { updateCartBadge } from './assets/js/cart.js';
 
+  async function loadFeaturedProducts() {
+    const container = document.getElementById('featuredProducts');
+    const products = await getProducts({ featured: true });
 
+    container.innerHTML = '';
 
+    const productsToShow = products.slice(0, 3);
+    for (const product of productsToShow) {
+      const card = await createProductCard(product);
+      container.appendChild(card);
+    }
+  }
 
+  updateCartBadge();
+  loadFeaturedProducts();
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  const carousel = new bootstrap.Carousel(document.getElementById('carouselExampleCaptions'), {
+    interval: 5000,
+    ride: 'carousel'
+  });
+</script>
+
 </body>
 </html>
